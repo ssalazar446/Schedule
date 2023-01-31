@@ -150,6 +150,14 @@ body {
 .line {
     color: #000;
 }
+
+.sectionLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    transition: all 0.4s ease;
+}
 /* Bubble Efect */
 .bubble {
   border-radius: 50%;
