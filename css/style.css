@@ -1,0 +1,228 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Body */
+body {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  font-family: "Poppins";
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center;
+}
+
+.glassmorphism-effect {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+/* CSS Container Structure */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 20px;
+  height: 90%;
+  width: 95%;
+}
+
+.padding-box {
+  box-sizing: border-box;
+  padding: 14px;
+}
+
+/* Left Container */
+
+.title p:first-child {
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(43, 46, 46);
+  text-shadow: 1px 1px 2px rgb(79, 85, 85);
+  font-size: 38px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.title p:last-child {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.goals {
+  align-items: center;
+  display: flex;
+}
+
+.goals div {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin-right: 10px;
+  width: 40px;
+}
+.goals p {
+  color: snow;
+}
+
+.goals img {
+  width: 30px;
+}
+
+/* Right Container Structure */
+
+.main-content > div:nth-child(2) {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Cards */
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  height: 150px;
+  position: relative;
+  width: 170px;
+}
+
+.card > div:first-child {
+  align-items: center;
+  border-radius: 16px;
+  display: flex;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  z-index: 1;
+}
+
+.titleTeacher, .nameTeacher {
+    font-size: 14px;
+}
+
+
+.card > div:first-child p {
+  color: #64c2c9;
+  margin: 0;
+  padding-right: 0px;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+
+.card > div:last-child {
+  border-radius: 16px;
+  display: grid;
+  grid-column: 2 / 5;
+  grid-row: 1 / 2;
+  justify-content: center;
+  z-index: 2;
+}
+
+.card > div:last-child p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 18px 0 -8px 0;
+}
+
+.card > div:last-child p:last-child {
+  margin: -2px 0 0 1px;
+  font-size: 15px;
+}
+
+.margin-bottom-card {
+  margin-bottom: 20px;
+}
+
+
+.day {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.planeador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px !important;
+}
+
+.line {
+    color: #000;
+}
+/* Bubble Efect */
+.bubble {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.bubble-one {
+  height: 80px;
+  left: 300px;
+  top: 10px;
+  width: 80px;
+}
+
+.bubble-two {
+  height: 230px;
+  right: 200px;
+  top: -50px;
+  width: 230px;
+}
+
+.bubble-three {
+  height: 50px;
+  right: 450px;
+  top: -20px;
+  width: 50px;
+}
+
+.bubble-four {
+  bottom: 40px;
+  height: 100px;
+  left: -30px;
+  width: 100px;
+}
+
+/* Footer */
+.m {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  color: azure;
+}
+
+/* Responsive */
+
+@media (max-width: 1300px) {
+  .container {
+    grid-template-columns: none;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content > div:nth-child(2) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .main-content > div:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .main-content > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease;
+  }
+}
